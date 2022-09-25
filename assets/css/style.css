@@ -46,29 +46,20 @@ body {
 
 #banner{
     margin-bottom: 2%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 /* Navigation Bar Styling */
 a {
     color: #000000;
     text-decoration: none;
+    font-weight: bold;
 }
 
 /* Paragraph Font Size */
 p {
     font-size: 16px;
-}
-
-.right-section{
-    margin-left: 200px;
-}
-
-.right-section h3{
-margin: 50px 0 50px 20px; /* margin around h3 in the section to the right */
-}
-
-h2{
-    
 }
 
 #about-me-right{
@@ -93,35 +84,67 @@ h2{
     margin-right: auto;
     border: 5px solid;
     width: 51%;
+    display: flex;
+
+}
+
+.img-center:hover {
+    box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
+    /* filter: blur(20px);
+    opacity: 1; */
 }
 
 .img-small{
     width: 48%;
     margin: 1%;
-    object-fit: none;
+    object-fit: cover;
     border: 5px solid;
+    /* transition: all 0.5 ease-in-out; */
+}
+
+/* Styling when hovered */
+.img-small:hover{
+        box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
 }
 
 #about-me{
     display: flex;
     flex-direction: row;
+    margin-bottom: 2%;
+    text-align: right;
+}
+
+
+#about-me h2, #work h2, #contact-me h2{
+flex: 0 0 15%;
+padding-right: 1%;
+font-size: 210%;
+}
+
+#about-me h3{
+    text-align: left;
 }
 
 #work{
     display: flex;
     flex-direction: row;
+    margin-bottom: 2%;
+    text-align: right;
 }
 
 #contact-me{
     display: flex;
     flex-direction: row;
+    margin-bottom: 2%;
+    text-align: right;
+}
+
+#contact-me-right {
+    text-align: left;
+    display: flex;
 }
 
 /* centers h2 on the left */
-#about-me h2{ 
-    /* margin: auto; */
-    
-}
 
 .image-block{
     align-items: center;
@@ -129,7 +152,7 @@ h2{
     flex-wrap: wrap;
 }
 
-/* Link Syling */
+/* Footer Link Syling */
 
 #github-link:link, #github-link:visited {
     background-color: #f44336;
@@ -138,14 +161,16 @@ h2{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 5%;
+    height: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
   
   #github-link:hover, #github-link:active {
     background-color: red;
   }
 
-/* @media(max-width:768px){
+ /* @media(max-width:768px){
     .header h1 { font-size: 40px;}
     .header { display: flex; align-items: center; padding: 15px;}
     .header nav { padding-top: 0; margin-left: auto;}
