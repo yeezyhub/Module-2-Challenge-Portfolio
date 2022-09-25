@@ -10,12 +10,18 @@ body {
     background-color: #d9dcd6;
 }
 
+/* Makes the avatar rounded */
+#avatar{ 
+    border-radius: 50%;
+}
+
 /* Header Styling */
 .header {
     padding: 20px; /* Padding around the header and nav elements */
-    background-color: #ffee00;
+    background-color: white;
     color: #000000;
 }
+
 
 .header h1 {
     display: inline-block; /* shows everythin in line in a block */
@@ -38,6 +44,10 @@ body {
     margin-left: 25px; /* changes spaces between nav items */
 }
 
+#banner{
+    margin-bottom: 2%;
+}
+
 /* Navigation Bar Styling */
 a {
     color: #000000;
@@ -49,12 +59,8 @@ p {
     font-size: 16px;
 }
 
-.left-section{
-
-}
-
 .right-section{
-    margin-left: 500px;
+    margin-left: 200px;
 }
 
 .right-section h3{
@@ -62,7 +68,7 @@ margin: 50px 0 50px 20px; /* margin around h3 in the section to the right */
 }
 
 h2{
-
+    
 }
 
 #about-me-right{
@@ -85,15 +91,15 @@ h2{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border: 3px solid;
-    width: 100%;
+    border: 5px solid;
+    width: 51%;
 }
 
 .img-small{
-    width: 50%;
-    padding: 15px;
+    width: 48%;
+    margin: 1%;
     object-fit: none;
-    border: 3px solid;
+    border: 5px solid;
 }
 
 #about-me{
@@ -106,11 +112,6 @@ h2{
     flex-direction: row;
 }
 
-#resume{
-    display: flex;
-    flex-direction: row;
-}
-
 #contact-me{
     display: flex;
     flex-direction: row;
@@ -118,7 +119,7 @@ h2{
 
 /* centers h2 on the left */
 #about-me h2{ 
-    margin: auto;
+    /* margin: auto; */
     
 }
 
@@ -126,8 +127,23 @@ h2{
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    
 }
+
+/* Link Syling */
+
+#github-link:link, #github-link:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5%;
+  }
+  
+  #github-link:hover, #github-link:active {
+    background-color: red;
+  }
 
 /* @media(max-width:768px){
     .header h1 { font-size: 40px;}
