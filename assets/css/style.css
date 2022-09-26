@@ -26,7 +26,6 @@ body {
     display: flex;
     align-items: center;
     
-    
 }
 
 
@@ -37,13 +36,16 @@ body {
     margin-left: auto;
     
 }
-.header .logo {
+
+/* Top-Left part of the website*/
+.header .logo { 
     flex-wrap: nowrap;
     display: flex;
     flex-shrink: 0;
     align-items: center;
 }
 
+/* The header on the top-left part of the website */
 .header .logo h1 { 
     margin-left: 10px;
     font-size: 48px;
@@ -53,11 +55,12 @@ body {
 
 /* Combined with .header nav ul */
 .header nav ul li { 
-    display: inline-block; /* shows everythin in line in a block */
+    display: inline-block; /* shows everything in line in a block */
     margin-left: 25px; /* changes spaces between nav items */
     
 }
 
+/* Banner */
 #banner{
     margin-bottom:30px;
     height: 50vh;
@@ -78,21 +81,21 @@ p {
     font-size: 16px;
 }
 
-#about-me-right{
+#about-me-right{ /* Right Side of the About Me */
     border-left:5px solid black;
     text-align: left;
     display: flex;
     align-items: center;
 }
 
-#work-right{
+#work-right{ /* Right Side of the Work */
     border-left:5px solid black;
     text-align: left;
     display: flex;
     align-items: center;
 }
 
-#contact-me-right{
+#contact-me-right{ /* Right Side of the Contact Me */
     border-left:5px solid black;
     text-align: left;
     display: flex;
@@ -100,7 +103,7 @@ p {
     white-space: nowrap;
 }
 
-.img-center{
+.img-center{ /* Image in the center */
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -111,14 +114,29 @@ p {
     transition: .3s ease;
 }
 
+/* All images */
+img {  
+    max-width: 100%; 
+    max-height: 100%;
+    width: -webkit-fill-available;/* Fill the available width with images */
+}
 
+/* Hovering state on the bigger image */
 .img-center:hover {
     box-shadow: inset 0px 0px 8px rgba(37, 37, 37, 1), 0 0 15px rgba(37, 37, 37, 1);
     /* backdrop-filter: blur(10px);
         filter: blur(3px);
         transition: 0.3s ease-in-out; */
 }
-.small-frame { display: flex; flex-wrap: wrap; margin: 0 -15px; padding-top: 30px;}
+
+/* Styling for smaller images */
+.small-frame { 
+    display: flex; 
+    flex-wrap: wrap; 
+    margin: 0 -15px; 
+    padding-top: 30px; 
+    width: fit-content;
+}
 
 .img-small{
     width: 50%;
@@ -127,23 +145,37 @@ p {
     transition: .3s ease;
 }
 
-.img-small.img-center { border:0}
-.img-small.img-center:hover { box-shadow: none;}
-/* Styling when hovered */
+.img-small.img-center { 
+    border:0;
+}
+
+.img-small.img-center:hover {
+    box-shadow: none;
+}
+
+.img-small img {
+    border: 5px solid #000;
+}
+
+/* Overlay text styling */
+.img-small .text-overlay-main { 
+    left:15px; bottom: 30px;
+}
+
+/* Styling when hovered over smaller images*/
 .img-small:hover img{
         box-shadow: inset 0px 0px 8px rgba(37, 37, 37, 1), 0 0 15px rgba(37, 37, 37, 1);
         /* backdrop-filter: blur(10px);
         filter: blur(3px);
         transition: 0.3s ease-in-out; */
 }
-.img-small img {border: 5px solid #000;}
-.img-small .text-overlay-main { left:15px; bottom: 30px;}
 
+/* To hold textbox and image together */
 .container{
     position: relative;
 }
 
-/* Bottom right text */
+/* Textboxes of images in the main*/
 .text-overlay-main {
     position: absolute;
     bottom: 15px;
@@ -153,9 +185,9 @@ p {
     color: #fff;
     padding: 10px 5px 10px 20px;
     font-size: 15px;
-    
   }
 
+  /* About me */
 #about-me{
     display: flex;
     flex-direction: row;
@@ -175,6 +207,7 @@ p {
     margin-left: 1%;
 }
 
+/* Work */
 #work{
     display: flex;
     flex-direction: row;
@@ -182,6 +215,7 @@ p {
     text-align: right;
 }
 
+/* Contact Me */
 #contact-me{
     display: flex;
     flex-direction: row;
@@ -193,8 +227,6 @@ p {
     margin: 20px;
 }
 
-/* centers h2 on the left */
-
 .image-block{
     align-items: center;
     display: flex;
@@ -202,8 +234,7 @@ p {
     margin: 2%;
 }
 
-/* Footer Link Syling */
-
+/* Footer Link Syling Box */
 #github-link:link, #github-link:visited {
     background-color: #f44336;
     color: white;
@@ -242,9 +273,7 @@ p {
     .header nav ul { display: flex; justify-content: space-between; padding-top: 30px;}
     .header nav ul li{ margin-left: 26px; }
     .header nav ul li:first{ margin-left: 0px; }
-
     #contact-me-right { flex-wrap: wrap; justify-content: center; padding-top: 30px;}
     
 }
 
-img { max-width: 100%; max-height: 100%;}
