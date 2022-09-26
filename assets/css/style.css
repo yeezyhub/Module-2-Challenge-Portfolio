@@ -7,47 +7,63 @@
 }
 
 body {
-    background-color: #d9dcd6;
+    background-color: white;
 }
 
 /* Makes the avatar rounded */
-#avatar{ 
-    border-radius: 50%;
+.avatar{ 
+    border-radius: 30%;
+    vertical-align: bottom;
+    height: 65px;
 }
+
 
 /* Header Styling */
 .header {
     padding: 20px; /* Padding around the header and nav elements */
     background-color: white;
     color: #000000;
-}
-
-
-.header h1 {
-    display: inline-block; /* shows everythin in line in a block */
-    font-size: 48px;
+    display: flex;
+    align-items: center;
+    
+    
 }
 
 
 /* Nav element in header class */
 .header nav {
-    padding-top: 20px;
     margin-right: 20px;
-    float: right;
     font-size: 20px;
+    margin-left: auto;
+    
 }
+.header .logo {
+    flex-wrap: nowrap;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+.header .logo h1 { 
+    margin-left: 10px;
+    font-size: 48px;
+}
+
 
 
 /* Combined with .header nav ul */
 .header nav ul li { 
     display: inline-block; /* shows everythin in line in a block */
     margin-left: 25px; /* changes spaces between nav items */
+    
 }
 
 #banner{
-    margin-bottom: 2%;
-    max-width: 100%;
-    max-height: 100%;
+    margin-bottom:30px;
+    height: 50vh;
+    width: 100%;
+    background: url('../images/banner.jpg') no-repeat center;
+    background-size: cover;
 }
 
 /* Navigation Bar Styling */
@@ -64,18 +80,24 @@ p {
 
 #about-me-right{
     border-left:5px solid black;
+    text-align: left;
+    display: flex;
+    align-items: center;
 }
 
 #work-right{
     border-left:5px solid black;
+    text-align: left;
+    display: flex;
+    align-items: center;
 }
 
 #contact-me-right{
     border-left:5px solid black;
-}
-
-#resume-right{
-    border-left:5px solid black;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
 }
 
 .img-center{
@@ -83,29 +105,56 @@ p {
     margin-left: auto;
     margin-right: auto;
     border: 5px solid;
-    width: 51%;
+    width: 100%;
     display: flex;
-
+    position: relative;
+    transition: .3s ease;
 }
+
 
 .img-center:hover {
-    box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
-    /* filter: blur(20px);
-    opacity: 1; */
+    box-shadow: inset 0px 0px 8px rgba(37, 37, 37, 1), 0 0 15px rgba(37, 37, 37, 1);
+    /* backdrop-filter: blur(10px);
+        filter: blur(3px);
+        transition: 0.3s ease-in-out; */
 }
+.small-frame { display: flex; flex-wrap: wrap; margin: 0 -15px; padding-top: 30px;}
 
 .img-small{
-    width: 48%;
-    margin: 1%;
+    width: 50%;
+    padding: 15px;;
     object-fit: cover;
-    border: 5px solid;
-    /* transition: all 0.5 ease-in-out; */
+    transition: .3s ease;
 }
 
+.img-small.img-center { border:0}
+.img-small.img-center:hover { box-shadow: none;}
 /* Styling when hovered */
-.img-small:hover{
-        box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
+.img-small:hover img{
+        box-shadow: inset 0px 0px 8px rgba(37, 37, 37, 1), 0 0 15px rgba(37, 37, 37, 1);
+        /* backdrop-filter: blur(10px);
+        filter: blur(3px);
+        transition: 0.3s ease-in-out; */
 }
+.img-small img {border: 5px solid #000;}
+.img-small .text-overlay-main { left:15px; bottom: 30px;}
+
+.container{
+    position: relative;
+}
+
+/* Bottom right text */
+.text-overlay-main {
+    position: absolute;
+    bottom: 15px;
+    left:-5px;
+    max-width: fit-content;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 5px 10px 20px;
+    font-size: 15px;
+    
+  }
 
 #about-me{
     display: flex;
@@ -116,13 +165,14 @@ p {
 
 
 #about-me h2, #work h2, #contact-me h2{
-flex: 0 0 15%;
-padding-right: 1%;
-font-size: 210%;
+    flex: 0 0 15%;
+    padding-right: 1%;
+    font-size: 210%;
 }
 
 #about-me h3{
     text-align: left;
+    margin-left: 1%;
 }
 
 #work{
@@ -139,9 +189,8 @@ font-size: 210%;
     text-align: right;
 }
 
-#contact-me-right {
-    text-align: left;
-    display: flex;
+#contact-me-right h3{
+    margin: 20px;
 }
 
 /* centers h2 on the left */
@@ -150,6 +199,7 @@ font-size: 210%;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+    margin: 2%;
 }
 
 /* Footer Link Syling */
@@ -157,7 +207,7 @@ font-size: 210%;
 #github-link:link, #github-link:visited {
     background-color: #f44336;
     color: white;
-    padding: 14px 25px;
+    padding: 25px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -170,10 +220,31 @@ font-size: 210%;
     background-color: red;
   }
 
- /* @media(max-width:768px){
-    .header h1 { font-size: 40px;}
-    .header { display: flex; align-items: center; padding: 15px;}
-    .header nav { padding-top: 0; margin-left: auto;}
-    .header nav a{font-size: 18px;}
-    .header nav ul li:first-child{ margin-left: 0;}
-} */
+  /* Helps the contact me section and its elements to go back to flex */
+  @media(max-width:1060px){
+    #contact-me-right h3{ display: flex; white-space: normal;}
+    #github-link:link, #github-link:visited{ height: auto; }
+}
+
+/* Transforms the section names from left to top */
+    @media (max-width:900px){
+    #about-me-right, #work-right, #contact-me-right{ border-left: none; border-top: 5px solid black;}
+    #about-me, #work, #contact-me{ flex-direction: column; align-items: center;}
+    #about-me h3 { margin: 2%; }
+    .small-frame .text-overlay-main h3{ font-size: 14px; }
+    
+}
+
+/* Navigation Bar Adjustment */
+    @media (max-width:768px){
+    .header { flex-wrap: wrap;}
+    .header nav{ margin-left:0; width: 100%;}
+    .header nav ul { display: flex; justify-content: space-between; padding-top: 30px;}
+    .header nav ul li{ margin-left: 26px; }
+    .header nav ul li:first{ margin-left: 0px; }
+
+    #contact-me-right { flex-wrap: wrap; justify-content: center; padding-top: 30px;}
+    
+}
+
+img { max-width: 100%; max-height: 100%;}
