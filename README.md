@@ -10,7 +10,7 @@
 
 ## Usage
 
-<img src="assets/images/horiseon-website.png" width="50%" height="50%">
+<img src="./assets/images/yeezy-my-portfolio.png" width="50%" height="50%">
 
 ## Credits
 
