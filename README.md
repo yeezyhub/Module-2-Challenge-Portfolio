@@ -1,8 +1,8 @@
-# Module-2-Challenge-Portfolio
+# My-Portfolio
 
 ## Deployed Website
 
-[yeezyhub - My Portfolio](https://yeezyhub.github.io/Module-2-Challenge-Portfolio/)
+[yeezyhub - My Portfolio](https://yeezyhub.github.io/My-Portfolio/)
 
 ## Description
 
